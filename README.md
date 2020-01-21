@@ -1,4 +1,4 @@
-# planets
+# Planets API
 
 ## Project setup
 ```
