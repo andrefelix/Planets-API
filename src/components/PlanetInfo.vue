@@ -66,7 +66,7 @@ export default class PlanetInfo extends Vue {
    * @function
    */
   get planetPopulation (): number | string {
-    return this.planet.population !== undefined ? this.planet.population : 'unknown'
+    return this.planet.population !== undefined ? this.planet.population : 'UNKNOWN'
   }
 }
 </script>
