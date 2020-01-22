@@ -22,7 +22,7 @@ export default class PlanetNextButton extends Vue {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .button-container {
   margin: 25px;
 }
@@ -39,14 +39,14 @@ button {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   cursor: pointer;
-}
 
-button:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 
-button:active {
-  background-color: #ccc;
-  transform: translateY(4px);
+  &:active {
+    background-color: #ccc;
+    transform: translateY(4px);
+  }
 }
 </style>
