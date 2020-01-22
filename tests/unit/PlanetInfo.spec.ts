@@ -10,11 +10,11 @@ const factory = (values = {}) => {
 
 describe('Planetinfo.vue', () => {
   const planet: PlanetInterface = {
-    name: 'Test',
+    name: 'Planet name',
     population: 1,
-    climate: ['test'],
-    terrain: ['test'],
-    featuredInFilms: ['test']
+    climate: ['Planet climate'],
+    terrain: ['Planet terrain'],
+    featuredInFilms: ['Planet featured in films']
   }
 
   const classes: string[] = ['.card', '.card-content', '.list-info']
@@ -49,5 +49,11 @@ describe('Planetinfo.vue', () => {
     for (const element of elements) {
       expect(wrapper.contains(element)).toBeTruthy()
     }
+  })
+
+  it('deveeria montar o elemento h4 com o texto correto', () => {
+    const wrapper = factory({ planet })
+    const h4 = wrapper.find('h4')
+    expect(h4.text()).toMatch(planet.name)
   })
 })
