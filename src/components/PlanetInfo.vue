@@ -66,13 +66,13 @@ export default class PlanetInfo extends Vue {
    * @function
    */
   get planetPopulation (): number | string {
-    return this.planet.population !== undefined ? this.planet.population : 'UNKNOWN'
+    return this.planet.population !== undefined ? this.planet.population : 'unknown'
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 .card {
   display: flex;
   flex-direction: column;
@@ -80,22 +80,22 @@ export default class PlanetInfo extends Vue {
   width: 315px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-}
 
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 }
 
 .card-content {
   text-align: left;
   border: 2px solid var(--primary-color);
-}
 
-.card-content h4 {
-  text-align: center;
-  border-bottom: 2px solid var(--primary-color);
-  margin: 0;
-  padding: 15px 0;
+  h4 {
+    text-align: center;
+    border-bottom: 2px solid var(--primary-color);
+    margin: 0;
+    padding: 15px 0;
+  }
 }
 
 p {
@@ -111,14 +111,14 @@ p {
   padding: 0;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
-}
 
-.card-content > ul:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-}
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 
-.card-content > ul:last-child {
-  margin-bottom: 15px;
+  &:last-child {
+    margin-bottom: 15px;
+  }
 }
 
 li ul {
